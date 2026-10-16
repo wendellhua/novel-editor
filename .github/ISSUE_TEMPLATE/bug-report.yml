@@ -1,0 +1,50 @@
+name: 缺陷报告
+description: 报告程序的问题或崩溃
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢报告问题。**请勿粘贴 API Key、`llm.json` 或未脱敏的日志。**
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么
+      description: 清晰描述问题，以及期望的正确行为。
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开 ...
+        2. 点击 ...
+        3. 观察到 ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: 例如 0.1.0（「设置 → 关于」可查看）。
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS（Apple 芯片）
+        - 其他
+  - type: input
+    id: model
+    attributes:
+      label: 使用的模型服务（如与 AI 功能相关）
+      description: 例如 DeepSeek + deepseek-chat，或本机 Ollama。
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志（可选）
+      description: 数据目录 `logs/` 下当天日志中的相关报错（先确认不含 Key）。

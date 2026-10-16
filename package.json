@@ -1,0 +1,68 @@
+{
+  "name": "novel-editor",
+  "productName": "NovelEditor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "本地离线小说编辑器：浏览器写作 + 任意 OpenAI 兼容大模型检查，面向长篇网文作者",
+  "license": "MIT",
+  "keywords": [
+    "novel",
+    "writing",
+    "editor",
+    "llm",
+    "openai-compatible",
+    "小说",
+    "写作"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendellhua/novel-editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wendellhua/novel-editor/issues"
+  },
+  "homepage": "https://github.com/wendellhua/novel-editor#readme",
+  "scripts": {
+    "build": "node scripts/build.ts",
+    "start": "node --disable-warning=ExperimentalWarning dist/server.cjs --data-dir .devdata",
+    "dev": "npm run build && npm start",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:perf": "vitest run --config vitest.perf.config.ts",
+    "smoke": "node scripts/smoke.ts",
+    "smoke:browser": "node scripts/browser-smoke.ts",
+    "baseline:typo": "node --disable-warning=ExperimentalWarning scripts/typo-baseline.ts",
+    "baseline:bible": "node --disable-warning=ExperimentalWarning scripts/bible-baseline.ts",
+    "baseline:consistency": "node --disable-warning=ExperimentalWarning scripts/consistency-baseline.ts",
+    "package:win": "node scripts/package-win.ts",
+    "package:mac": "node scripts/package-mac.ts",
+    "e2e:release": "node --disable-warning=ExperimentalWarning scripts/release-e2e.ts",
+    "release": "npm run build && npm run package:win && npm run package:mac"
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.11.1",
+    "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.14",
+    "ajv": "^8.20.0",
+    "fflate": "^0.8.3",
+    "naive-ui": "^2.45.3",
+    "pinia": "^4.0.3",
+    "vue": "^3.5.43",
+    "vue-router": "^5.4.0",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "esbuild": "^0.28.2",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.4",
+    "vitest": "^4.1.11",
+    "vue-tsc": "^3.3.12"
+  }
+}

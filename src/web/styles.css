@@ -1,0 +1,16 @@
+:root {
+  --ne-font: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC',
+    'Segoe UI', sans-serif;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--ne-font);
+  -webkit-font-smoothing: antialiased;
+}

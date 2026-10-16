@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 使用问题
+    url: https://github.com/wendellhua/novel-editor/discussions
+    about: 使用上的疑问请到 Discussions 提问。

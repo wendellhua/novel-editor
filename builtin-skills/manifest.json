@@ -1,0 +1,12 @@
+[
+  { "id": "builtin:typo-check", "dir": "typo-check", "jobType": "typo" },
+  { "id": "builtin:editorial-review", "dir": "editorial-review", "jobType": "review" },
+  { "id": "builtin:setting-consistency", "dir": "setting-consistency", "jobType": "setting" },
+  { "id": "builtin:character-consistency", "dir": "character-consistency", "jobType": "character" },
+  { "id": "builtin:ai-flavor-check", "dir": "ai-flavor-check", "jobType": "ai_flavor" },
+  { "id": "builtin:inspiration-capsule", "dir": "inspiration-capsule", "jobType": "inspiration" },
+  { "id": "builtin:smart-expand", "dir": "smart-expand", "jobType": "expand" },
+  { "id": "builtin:bible-extract", "dir": "bible-extract", "jobType": "bible_extract" },
+  { "id": "builtin:plot-memory", "dir": "plot-memory", "jobType": "memory" },
+  { "id": "builtin:chapter-summary", "dir": "chapter-summary", "jobType": "summary" }
+]

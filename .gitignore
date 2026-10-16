@@ -1,0 +1,32 @@
+# 依赖与构建产物
+node_modules/
+dist/
+release/
+
+# 本地开发数据与缓存（含开发数据目录、Node 运行时缓存、冒烟截图、基线结果）
+.cache/
+.devdata/
+
+# 日志与临时文件
+*.log
+npm-debug.log*
+*.tsbuildinfo
+coverage/
+tmp/
+
+# 环境变量与密钥（API Key 只通过环境变量或应用内设置传入，不要提交）
+.env
+.env.*
+!.env.example
+llm.json
+
+# 操作系统与编辑器
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# AI 助手的本地工作目录
+.codebuddy/
